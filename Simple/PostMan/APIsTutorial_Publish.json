@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "53205e0d-bd91-41df-8f85-c24939310006",
+		"name": "APIsTutorial_Publish",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TodoItems",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.jackslater.ir/v1/TodoItems",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jackslater",
+						"ir"
+					],
+					"path": [
+						"v1",
+						"TodoItems"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTodoItemById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.jackslater.ir/v1/TodoItems/1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jackslater",
+						"ir"
+					],
+					"path": [
+						"v1",
+						"TodoItems",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddTodoItem",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\":\"Item 4\",\r\n  \"isComplete\":true\r\n}"
+				},
+				"url": {
+					"raw": "https://api.jackslater.ir/v1/TodoItems",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jackslater",
+						"ir"
+					],
+					"path": [
+						"v1",
+						"TodoItems"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReplaceTodoItem",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1,\r\n    \"name\":\"Item 2\",\r\n    \"isComplete\":true\r\n}"
+				},
+				"url": {
+					"raw": "https://api.jackslater.ir/v1/TodoItems/1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jackslater",
+						"ir"
+					],
+					"path": [
+						"v1",
+						"TodoItems",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteTodoItem",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.jackslater.ir/v1/TodoItems/1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jackslater",
+						"ir"
+					],
+					"path": [
+						"v1",
+						"TodoItems",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateTodoItem",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "https://api.jackslater.ir/v1/jsonpatch/JsonPatchWithModelState",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jackslater",
+						"ir"
+					],
+					"path": [
+						"v1",
+						"jsonpatch",
+						"JsonPatchWithModelState"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchTodoItem",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.jackslater.ir/v1/TodoItems/Search/Item",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jackslater",
+						"ir"
+					],
+					"path": [
+						"v1",
+						"TodoItems",
+						"Search",
+						"Item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTodoItemByIdV2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.jackslater.ir/v2/TodoItems/2",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jackslater",
+						"ir"
+					],
+					"path": [
+						"v2",
+						"TodoItems",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetApiVersion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.jackslater.ir/v2/TodoItems/GetApiVersion",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jackslater",
+						"ir"
+					],
+					"path": [
+						"v2",
+						"TodoItems",
+						"GetApiVersion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetToken",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Username\": \"SinjulMSBH\",\n\t\"Password\": \"Sinjul_8\"\n}"
+				},
+				"url": {
+					"raw": "https://api.jackslater.ir/GetToken",
+					"protocol": "https",
+					"host": [
+						"api",
+						"jackslater",
+						"ir"
+					],
+					"path": [
+						"GetToken"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

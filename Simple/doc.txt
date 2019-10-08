@@ -1,0 +1,31 @@
+﻿Disable SSL certificate verification
+From File > Settings (General tab), disable SSL certificate verification.
+Warning:Re-enable SSL certificate verification after testing the controller.
+
+Microsoft.AspNetCore.JsonPatch
+Microsoft.AspNetCore.Mvc.NewtonsoftJson
+
+
+Test web APIs with the HTTP REPL
+The following HTTP verbs are supported:
+
+DELETE
+GET
+HEAD
+OPTIONS
+PATCH
+POST
+PUT
+
+dotnet tool install -g Microsoft.dotnet-httprepl
+
+httprepl
+httprepl -h
+httprepl --help
+httprepl https://localhost:5001
+
+https://docs.microsoft.com/en-us/aspnet/core/web-api/http-repl?view=aspnetcore-3.0&tabs=windows
+
+
+
+

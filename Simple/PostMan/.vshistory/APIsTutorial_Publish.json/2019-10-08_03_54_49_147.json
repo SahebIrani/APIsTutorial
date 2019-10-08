@@ -1,0 +1,176 @@
+{
+  "info": {
+    "_postman_id": "99391693-e71a-49d2-bffd-6ba5656bfeed",
+    "name": "APIsTutorial_Publish",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "TodoItems",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jackslater.ir/api/TodoItems",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "TodoItems"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetTodoItemById",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jackslater.ir/api/TodoItems/1",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "TodoItems",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "AddTodoItem",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\":\"Item 4\",\r\n  \"isComplete\":true\r\n}"
+        },
+        "url": {
+          "raw": "https://jackslater.ir/api/TodoItems",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "TodoItems"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ReplaceTodoItem",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\":1,\r\n    \"name\":\"Item 2\",\r\n    \"isComplete\":true\r\n}"
+        },
+        "url": {
+          "raw": "https://jackslater.ir/api/TodoItems/1",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "TodoItems",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DeleteTodoItem",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "https://jackslater.ir/api/TodoItems/1",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "TodoItems",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UpdateTodoItem",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "https://jackslater.ir/jsonpatch/JsonPatchWithModelState",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "jsonpatch",
+            "JsonPatchWithModelState"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SearchTodoItem",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jackslater.ir/api/TodoItems/Search/Item1",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "TodoItems",
+            "Search",
+            "Item1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

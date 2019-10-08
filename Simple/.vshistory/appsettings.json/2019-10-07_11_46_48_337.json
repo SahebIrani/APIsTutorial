@@ -1,0 +1,26 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=aspnet-Sample-E1863F71-7BBC-47DD-924C-AF3B3039868C;Trusted_Connection=True;MultipleActiveResultSets=true"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*",
+  "TokenManagement": {
+    "secret": "Sinjul_MSBH_JackSlater_4",
+    "encrypt": "abcdefghijklmnop",
+    "issuer": "sinjulmsbh.ir",
+    "audience": "SunjulMSBH",
+    "accessExpiration": 30,
+    "refreshExpiration": 60
+  },
+  "Jwt": {
+    "SecureKey": "SomeReallySecretKey",
+    "Issuer": "SomeIssuer",
+    "Audience": "SomeAudience"
+  }
+}

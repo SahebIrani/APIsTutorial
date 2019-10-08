@@ -1,0 +1,4 @@
+﻿Disable SSL certificate verification
+From File > Settings (General tab), disable SSL certificate verification.
+Warning:Re-enable SSL certificate verification after testing the controller.
+
