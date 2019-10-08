@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 
 namespace Simple
 {
+#pragma warning disable CS1591
     public class Program
     {
         public static async Task Main(string[] args)
@@ -22,4 +23,5 @@ namespace Simple
                     webBuilder.UseStartup<Startup>();
                 });
     }
+#pragma warning restore CS1591
 }

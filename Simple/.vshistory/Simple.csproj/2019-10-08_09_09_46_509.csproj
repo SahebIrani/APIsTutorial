@@ -1,0 +1,92 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <!--Reference the analyzer package-->
+    <!--In ASP.NET Core 3.0 or later, the analyzers are included in the .NET Core SDK. To enable the analyzer in your project, include the IncludeOpenAPIAnalyzers property in the project file:-->
+    <IncludeOpenAPIAnalyzers>true</IncludeOpenAPIAnalyzers>
+    <!--<PublishSingleFile>true</PublishSingleFile>-->
+    <!--<PublishTrimmed>true</PublishTrimmed>-->
+
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\**" />
+    <Content Remove="Controllers\**" />
+    <EmbeddedResource Remove="Controllers\**" />
+    <None Remove="Controllers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V2\Controllers\.vshistory\AgreementsController.cs\2019-10-08_04_25_36_704.cs" />
+    <Compile Include="V2\Controllers\.vshistory\AgreementsController.cs\2019-10-08_04_26_32_911.cs" />
+    <Compile Include="V2\Controllers\.vshistory\OrdersController.cs\2019-10-08_04_25_01_778.cs" />
+    <Compile Include="V2\Controllers\.vshistory\OrdersController.cs\2019-10-08_04_26_32_914.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_05_39_43_005.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_05_40_56_027.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_05_42_46_667.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_05_44_44_680.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_05_44_46_597.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_05_46_01_843.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_05_46_14_229.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_05_46_34_914.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_05_46_52_989.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_05_49_18_610.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_05_49_20_485.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_05_49_28_396.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_05_50_25_296.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_05_50_39_166.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_05_51_05_355.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_06_04_30_277.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_06_04_46_089.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_06_05_20_479.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_06_08_47_423.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_06_09_21_899.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_06_09_59_644.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_06_10_33_753.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_06_12_04_547.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_06_12_59_468.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_06_20_07_115.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_06_23_54_737.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_06_35_18_868.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_06_35_38_992.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_06_36_11_891.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_06_37_46_337.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_06_39_32_445.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_06_40_19_691.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_06_42_43_045.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_07_03_47_889.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_07_05_18_919.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_07_07_28_675.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_07_07_43_812.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_07_18_02_586.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_07_18_15_140.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_07_26_40_877.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_07_26_53_467.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_07_29_09_745.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_07_29_14_478.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_07_29_55_036.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_07_31_52_133.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_07_32_22_542.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_07_34_02_649.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_07_36_44_019.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_07_46_44_938.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_07_46_53_867.cs" />
+    <Compile Include="V2\Controllers\.vshistory\TodoItemsController.cs\2019-10-08_07_48_33_617.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="4.0.0-preview8.19405.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0-rc4" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.5.0" />
+  </ItemGroup>
+
+</Project>

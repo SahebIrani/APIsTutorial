@@ -13,7 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using Simple.Data;
 using Simple.Models;
 
-namespace Simple.V2.Controllers
+namespace Simple.V2.Controllers.vshistory.TodoItemsController.cs
 {
     [Authorize(Policy = "Over18")]
     [Controller]

@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
+using System.IO;
 using System.Net;
+using System.Reflection;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +23,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Logging;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 
 using Simple.Data;
 using Simple.Filters;
@@ -56,6 +59,61 @@ namespace Simple
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
+
+            // Register the Swagger generator, defining 1 or more Swagger documents
+            //services.AddSwaggerGen(c =>
+            //{
+            //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+            //});
+
+            // Register the Swagger generator, defining 1 or more Swagger documents
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "ToDo API",
+                    Description = "A simple example ASP.NET Core Web API",
+                    TermsOfService = new Uri("https://jackslater.ir/terms"),
+                    Contact = new OpenApiContact
+                    {
+                        Name = "SinjulMSBH",
+                        Email = string.Empty,
+                        Url = new Uri("https://twitter.com/Sinjul_MSBH"),
+                    },
+                    License = new OpenApiLicense
+                    {
+                        Name = "Use under LICX",
+                        Url = new Uri("https://jackslater.ir/license"),
+                    }
+                });
+
+                //c.SwaggerDoc("v2", new OpenApiInfo
+                //{
+                //    Version = "v2",
+                //    Title = "ToDo API",
+                //    Description = "A simple example ASP.NET Core Web API",
+                //    TermsOfService = new Uri("https://jackslater.ir/terms"),
+                //    Contact = new OpenApiContact
+                //    {
+                //        Name = "SinjulMSBH",
+                //        Email = string.Empty,
+                //        Url = new Uri("https://twitter.com/Sinjul_MSBH"),
+                //    },
+                //    License = new OpenApiLicense
+                //    {
+                //        Name = "Use under LICX",
+                //        Url = new Uri("https://jackslater.ir/license"),
+                //    }
+                //});
+
+                // Set the comments path for the Swagger JSON and UI.
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
+
+            });
+
 
             services.AddScoped<IAuthenticateService, TokenAuthenticationService>();
             services.AddScoped<IUserManagementService, UserManagementService>();
@@ -396,7 +454,7 @@ namespace Simple
                 options.DefaultApiVersion = new ApiVersion(1, 0);
                 options.ReportApiVersions = true;
                 options.Conventions.Controller<V1.Controllers.TodoItemsController>().HasApiVersion(1, 0);
-                options.Conventions.Controller<V2.Controllers.TodoItemsController>().HasApiVersion(2, 0);
+                //options.Conventions.Controller<V2.Controllers.TodoItemsController>().HasApiVersion(2, 0);
             });
         }
 
@@ -430,6 +488,18 @@ namespace Simple
             app.UseStaticFiles();
 
             app.UseHttpsRedirection();
+
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
+            // specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                //c.SwaggerEndpoint("/swagger/v2/swagger.json", "My API V2");
+                //c.RoutePrefix = string.Empty;
+            });
 
             app.UseRouting();
 
