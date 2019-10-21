@@ -19,7 +19,7 @@ namespace Simple.Controllers
         public IActionResult MyException(string? input)
         {
             if (input == null) throw new ArgumentNullException($"input is ArgumentNullException .. !!!!");
-            throw new HttpResponseException($"input is {input} .. !!!!");
+            throw new HttpResponseException($"input is {input}");
         }
 
         [HttpGet("/error")] public IActionResult Error() => Problem();

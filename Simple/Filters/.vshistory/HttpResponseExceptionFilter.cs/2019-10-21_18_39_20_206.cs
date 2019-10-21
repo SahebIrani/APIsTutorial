@@ -17,7 +17,7 @@ namespace Simple.Filters
             if (context.Exception is HttpResponseException exception)
             {
                 context.Result = new ObjectResult(exception.Value) { StatusCode = exception.Status };
-                context.HttpContext.Response.WriteAsync(exception.Message);
+                context.HttpContext.Response.WriteAsync(exception.Message)/*.GetAwaiter().GetResult()*/;
                 context.ExceptionHandled = true;
             }
         }

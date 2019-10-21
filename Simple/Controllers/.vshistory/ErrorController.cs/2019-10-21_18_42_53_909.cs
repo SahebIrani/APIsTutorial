@@ -15,11 +15,11 @@ namespace Simple.Controllers
     //[ApiController] // Global
     public class ErrorController : ControllerBase
     {
-        [HttpGet("[Action]/{input?}")]
+        [HttpGet("[Action]/{input}")]
         public IActionResult MyException(string? input)
         {
             if (input == null) throw new ArgumentNullException($"input is ArgumentNullException .. !!!!");
-            throw new HttpResponseException($"input is {input} .. !!!!");
+            throw new HttpResponseException($"{input} is {nameof(ArgumentNullException)} .. !!!!");
         }
 
         [HttpGet("/error")] public IActionResult Error() => Problem();

@@ -32,7 +32,7 @@ using Simple.Services;
 
 //Attribute on an assembly
 //If compatibility version is set to 2.2 or later, the[ApiController] attribute can be applied to an assembly.Annotation in this manner applies web API behavior to all controllers in the assembly. There's no way to opt out for individual controllers. Apply the assembly-level attribute to the namespace declaration surrounding the Startup class:
-[assembly: ApiController]
+//[assembly: ApiController]
 
 //Microsoft.AspNetCore.Mvc.ApiConventionTypeAttribute applied to an assembly — Applies the specified convention type to all controllers in the current assembly.As a recommendation, apply assembly-level attributes in the Startup.cs file.
 //In the following example, the default set of conventions is applied to all controllers in the assembly:

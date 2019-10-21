@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
@@ -17,7 +16,6 @@ namespace Simple.Filters
             if (context.Exception is HttpResponseException exception)
             {
                 context.Result = new ObjectResult(exception.Value) { StatusCode = exception.Status };
-                context.HttpContext.Response.WriteAsync(exception.Message);
                 context.ExceptionHandled = true;
             }
         }

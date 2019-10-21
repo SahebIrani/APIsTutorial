@@ -8,19 +8,14 @@ using Microsoft.Extensions.Hosting;
 
 using Newtonsoft.Json;
 
-using Simple.Exceptions;
-
 namespace Simple.Controllers
 {
     //[ApiController] // Global
     public class ErrorController : ControllerBase
     {
-        [HttpGet("[Action]/{input?}")]
-        public IActionResult MyException(string? input)
-        {
-            if (input == null) throw new ArgumentNullException($"input is ArgumentNullException .. !!!!");
-            throw new HttpResponseException($"input is {input} .. !!!!");
-        }
+        [HttpGet(nameof(MyException))]
+        public IActionResult MyException(string? input) =>
+            throw new ArgumentNullException(input, $"{input} is ArgumentNullException .. !!!!");
 
         [HttpGet("/error")] public IActionResult Error() => Problem();
 
